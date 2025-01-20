@@ -1,0 +1,23 @@
+{
+  "name": "honosync",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "lint": "eslint . --no-ignore src/index.ts",
+    "lint:fix": "npm run lint --fix",
+    "format": "prettier src/ --check",
+    "format:fix": "prettier src/ --write"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.7",
+    "hono": "^4.6.17"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.14.0",
+    "@types/node": "^20.11.17",
+    "eslint": "^9.18.0",
+    "eslint-plugin-format": "^1.0.1",
+    "prettier": "^3.4.2",
+    "tsx": "^4.7.1"
+  }
+}
