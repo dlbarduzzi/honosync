@@ -3,7 +3,11 @@ import antfu from "@antfu/eslint-config"
 export default antfu(
   {
     type: "app",
-    typescript: true,
+    typescript: {
+      overrides: {
+        "ts/consistent-type-definitions": "off",
+      },
+    },
     formatters: true,
     stylistic: {
       semi: false,
@@ -23,6 +27,7 @@ export default antfu(
         "error",
         {
           case: "kebabCase",
+          ignore: ["README.md"],
         },
       ],
     },

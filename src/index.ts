@@ -1,14 +1,10 @@
 import { serve } from "@hono/node-server"
-import { Hono } from "hono"
+import { app } from "./app"
 
-const app = new Hono()
+const port = Number(process.env.APP_PORT || 3000)
 
-app.get("/", c => {
-  return c.text("Hello Hono!")
-})
-
-const port = 3000
-console.warn(`Server is running on http://localhost:${port}`)
+// eslint-disable-next-line no-console
+console.log(`Server is running on http://localhost:${port}`)
 
 serve({
   fetch: app.fetch,

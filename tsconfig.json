@@ -1,23 +1,23 @@
 {
   "compilerOptions": {
+    "incremental": true,
     "target": "ESNext",
-    "skipLibCheck": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "module": "NodeNext",
-    "moduleResolution": "bundler",
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",
-    "incremental": true,
-    "verbatimModuleSyntax": true,
-    "types": [
-      "node"
-    ],
     "baseUrl": ".",
+    "module": "NodeNext",
+    "moduleResolution": "bundler",
     "paths": {
       "@/*": [
         "./src/*"
-      ],
-    }
+      ]
+    },
+    "types": [
+      "node"
+    ],
+    "strict": true,
+    "noImplicitAny": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true
   }
 }
