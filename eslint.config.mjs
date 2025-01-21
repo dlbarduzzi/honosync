@@ -25,6 +25,7 @@ export default antfu(
       "prefer-const": "error",
       "node/prefer-global/process": "off",
       "node/no-process-env": "error",
+      "perfectionist/sort-imports": "off",
       "unicorn/filename-case": [
         "error",
         {
