@@ -2,12 +2,7 @@ import type { PinoLogger } from "hono-pino"
 
 import { OpenAPIHono } from "@hono/zod-openapi"
 
-import { config } from "dotenv"
-import { expand } from "dotenv-expand"
-
 import { logger } from "middlewares/pino-logger"
-
-expand(config())
 
 type AppBindings = {
   Variables: {
@@ -31,4 +26,4 @@ app.onError((_, c) => {
   return c.json({ code: 500, message: "Internal server error." }, 500)
 })
 
-export { app }
+export default app

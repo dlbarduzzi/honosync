@@ -23,6 +23,8 @@ export default antfu(
       "max-len": ["error", { code: 88 }],
       "no-unused-expressions": "error",
       "prefer-const": "error",
+      "node/prefer-global/process": "off",
+      "node/no-process-env": "error",
       "unicorn/filename-case": [
         "error",
         {
