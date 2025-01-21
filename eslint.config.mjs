@@ -14,6 +14,7 @@ export default antfu(
       indent: 2,
       quotes: "double",
     },
+    ignores: ["package.json"],
   },
   {
     rules: {
