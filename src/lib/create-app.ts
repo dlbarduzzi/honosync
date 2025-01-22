@@ -6,6 +6,17 @@ import { logger } from "@/middlewares/pino-logger"
 export function createRouter() {
   return new OpenAPIHono<AppBindings>({
     strict: false,
+    defaultHook: (result, c) => {
+      if (!result.success) {
+        return c.json(
+          {
+            error: result.error,
+            success: result.success,
+          },
+          422,
+        )
+      }
+    },
   })
 }
 
